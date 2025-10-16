@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CachingBreedFetcherTest {
 
     @Test
-    void testCachingAvoidsRedundantCalls() throws BreedFetcher.BreedNotFoundException, IOException {
+    void testCachingAvoidsRedundantCalls() {
         BreedFetcherForLocalTesting mock = new BreedFetcherForLocalTesting();
         CachingBreedFetcher cachingFetcher = new CachingBreedFetcher(mock);
 
@@ -42,7 +42,7 @@ class CachingBreedFetcherTest {
 
     // tests that the count of API calls is correctly recorded
     @Test
-    void testCachingAvoidsRedundantCallsCheckCallsMade() throws BreedFetcher.BreedNotFoundException, IOException {
+    void testCachingAvoidsRedundantCallsCheckCallsMade() {
         BreedFetcherForLocalTesting mock = new BreedFetcherForLocalTesting();
         CachingBreedFetcher cachingFetcher = new CachingBreedFetcher(mock);
 
